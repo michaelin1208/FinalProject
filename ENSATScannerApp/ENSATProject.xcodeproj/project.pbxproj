@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0125828D1B6F9B86007C4720 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0125828C1B6F9B86007C4720 /* ForgetPasswordViewController.swift */; };
+		016BA2051B6C99D4006D0DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA2041B6C99D4006D0DA3 /* AppDelegate.swift */; };
+		016BA2071B6C99D4006D0DA3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA2061B6C99D4006D0DA3 /* FirstViewController.swift */; };
+		016BA2091B6C99D4006D0DA3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA2081B6C99D4006D0DA3 /* SecondViewController.swift */; };
+		016BA20C1B6C99D4006D0DA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 016BA20A1B6C99D4006D0DA3 /* Main.storyboard */; };
+		016BA20E1B6C99D4006D0DA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016BA20D1B6C99D4006D0DA3 /* Images.xcassets */; };
+		016BA2111B6C99D4006D0DA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016BA20F1B6C99D4006D0DA3 /* LaunchScreen.xib */; };
+		016BA21D1B6C99D4006D0DA3 /* ENSATProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA21C1B6C99D4006D0DA3 /* ENSATProjectTests.swift */; };
+		016BA2271B6C9AD9006D0DA3 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016BA2261B6C9AD9006D0DA3 /* ScannerViewController.swift */; };
+		01A02B8B1B901A2E004B8FDF /* DetailofBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A02B8A1B901A2E004B8FDF /* DetailofBoxViewController.swift */; };
+		01A02B931B919AEC004B8FDF /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A02B921B919AEC004B8FDF /* DetailTableViewCell.xib */; };
+		01A02B951B919B7F004B8FDF /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A02B941B919B7F004B8FDF /* DetailTableViewCell.swift */; };
+		01D9EF241BA714CA000390A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D9EF231BA714CA000390A2 /* MainViewController.swift */; };
+		01EB69EE1B9DA9D50031ACDD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB69ED1B9DA9D50031ACDD /* LoginViewController.swift */; };
+		01EB69F01B9DAFD50031ACDD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB69EF1B9DAFD50031ACDD /* HttpRequest.swift */; };
+		01EB69F21B9DB09A0031ACDD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EB69F11B9DB09A0031ACDD /* AlertView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		016BA2171B6C99D4006D0DA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 016BA1F71B6C99D3006D0DA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 016BA1FE1B6C99D3006D0DA3;
+			remoteInfo = ENSATProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0125828C1B6F9B86007C4720 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		012869051B70C57C00DEEA51 /* ENSATProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ENSATProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		016BA1FF1B6C99D4006D0DA3 /* ENSATProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ENSATProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		016BA2031B6C99D4006D0DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016BA2041B6C99D4006D0DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		016BA2061B6C99D4006D0DA3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		016BA2081B6C99D4006D0DA3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		016BA20B1B6C99D4006D0DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		016BA20D1B6C99D4006D0DA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		016BA2101B6C99D4006D0DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		016BA2161B6C99D4006D0DA3 /* ENSATProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ENSATProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		016BA21B1B6C99D4006D0DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		016BA21C1B6C99D4006D0DA3 /* ENSATProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENSATProjectTests.swift; sourceTree = "<group>"; };
+		016BA2261B6C9AD9006D0DA3 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		01A02B8A1B901A2E004B8FDF /* DetailofBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailofBoxViewController.swift; sourceTree = "<group>"; };
+		01A02B921B919AEC004B8FDF /* DetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		01A02B941B919B7F004B8FDF /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		01D9EF231BA714CA000390A2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		01EB69ED1B9DA9D50031ACDD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		01EB69EF1B9DAFD50031ACDD /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		01EB69F11B9DB09A0031ACDD /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		016BA1FC1B6C99D3006D0DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016BA2131B6C99D4006D0DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016BA1F61B6C99D3006D0DA3 = {
+			isa = PBXGroup;
+			children = (
+				016BA2011B6C99D4006D0DA3 /* ENSATProject */,
+				016BA2191B6C99D4006D0DA3 /* ENSATProjectTests */,
+				016BA2001B6C99D4006D0DA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		016BA2001B6C99D4006D0DA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				016BA1FF1B6C99D4006D0DA3 /* ENSATProject.app */,
+				016BA2161B6C99D4006D0DA3 /* ENSATProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		016BA2011B6C99D4006D0DA3 /* ENSATProject */ = {
+			isa = PBXGroup;
+			children = (
+				016BA2041B6C99D4006D0DA3 /* AppDelegate.swift */,
+				01EB69F11B9DB09A0031ACDD /* AlertView.swift */,
+				016BA2061B6C99D4006D0DA3 /* FirstViewController.swift */,
+				016BA2081B6C99D4006D0DA3 /* SecondViewController.swift */,
+				01EB69ED1B9DA9D50031ACDD /* LoginViewController.swift */,
+				016BA2261B6C9AD9006D0DA3 /* ScannerViewController.swift */,
+				01A02B8A1B901A2E004B8FDF /* DetailofBoxViewController.swift */,
+				01EB69EF1B9DAFD50031ACDD /* HttpRequest.swift */,
+				01D9EF231BA714CA000390A2 /* MainViewController.swift */,
+				016BA20A1B6C99D4006D0DA3 /* Main.storyboard */,
+				01A02B921B919AEC004B8FDF /* DetailTableViewCell.xib */,
+				01A02B941B919B7F004B8FDF /* DetailTableViewCell.swift */,
+				016BA20D1B6C99D4006D0DA3 /* Images.xcassets */,
+				016BA20F1B6C99D4006D0DA3 /* LaunchScreen.xib */,
+				016BA2021B6C99D4006D0DA3 /* Supporting Files */,
+				0125828C1B6F9B86007C4720 /* ForgetPasswordViewController.swift */,
+				012869051B70C57C00DEEA51 /* ENSATProject-Bridging-Header.h */,
+			);
+			path = ENSATProject;
+			sourceTree = "<group>";
+		};
+		016BA2021B6C99D4006D0DA3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				016BA2031B6C99D4006D0DA3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		016BA2191B6C99D4006D0DA3 /* ENSATProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				016BA21C1B6C99D4006D0DA3 /* ENSATProjectTests.swift */,
+				016BA21A1B6C99D4006D0DA3 /* Supporting Files */,
+			);
+			path = ENSATProjectTests;
+			sourceTree = "<group>";
+		};
+		016BA21A1B6C99D4006D0DA3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				016BA21B1B6C99D4006D0DA3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		016BA1FE1B6C99D3006D0DA3 /* ENSATProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016BA2201B6C99D4006D0DA3 /* Build configuration list for PBXNativeTarget "ENSATProject" */;
+			buildPhases = (
+				016BA1FB1B6C99D3006D0DA3 /* Sources */,
+				016BA1FC1B6C99D3006D0DA3 /* Frameworks */,
+				016BA1FD1B6C99D3006D0DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ENSATProject;
+			productName = ENSATProject;
+			productReference = 016BA1FF1B6C99D4006D0DA3 /* ENSATProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		016BA2151B6C99D4006D0DA3 /* ENSATProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 016BA2231B6C99D4006D0DA3 /* Build configuration list for PBXNativeTarget "ENSATProjectTests" */;
+			buildPhases = (
+				016BA2121B6C99D4006D0DA3 /* Sources */,
+				016BA2131B6C99D4006D0DA3 /* Frameworks */,
+				016BA2141B6C99D4006D0DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				016BA2181B6C99D4006D0DA3 /* PBXTargetDependency */,
+			);
+			name = ENSATProjectTests;
+			productName = ENSATProjectTests;
+			productReference = 016BA2161B6C99D4006D0DA3 /* ENSATProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		016BA1F71B6C99D3006D0DA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Michaelin;
+				TargetAttributes = {
+					016BA1FE1B6C99D3006D0DA3 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = F5NBU4297C;
+					};
+					016BA2151B6C99D4006D0DA3 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 016BA1FE1B6C99D3006D0DA3;
+					};
+				};
+			};
+			buildConfigurationList = 016BA1FA1B6C99D3006D0DA3 /* Build configuration list for PBXProject "ENSATProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 016BA1F61B6C99D3006D0DA3;
+			productRefGroup = 016BA2001B6C99D4006D0DA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				016BA1FE1B6C99D3006D0DA3 /* ENSATProject */,
+				016BA2151B6C99D4006D0DA3 /* ENSATProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		016BA1FD1B6C99D3006D0DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016BA20C1B6C99D4006D0DA3 /* Main.storyboard in Resources */,
+				016BA2111B6C99D4006D0DA3 /* LaunchScreen.xib in Resources */,
+				01A02B931B919AEC004B8FDF /* DetailTableViewCell.xib in Resources */,
+				016BA20E1B6C99D4006D0DA3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016BA2141B6C99D4006D0DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		016BA1FB1B6C99D3006D0DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016BA2091B6C99D4006D0DA3 /* SecondViewController.swift in Sources */,
+				01D9EF241BA714CA000390A2 /* MainViewController.swift in Sources */,
+				016BA2051B6C99D4006D0DA3 /* AppDelegate.swift in Sources */,
+				01A02B951B919B7F004B8FDF /* DetailTableViewCell.swift in Sources */,
+				01A02B8B1B901A2E004B8FDF /* DetailofBoxViewController.swift in Sources */,
+				01EB69EE1B9DA9D50031ACDD /* LoginViewController.swift in Sources */,
+				01EB69F21B9DB09A0031ACDD /* AlertView.swift in Sources */,
+				01EB69F01B9DAFD50031ACDD /* HttpRequest.swift in Sources */,
+				016BA2071B6C99D4006D0DA3 /* FirstViewController.swift in Sources */,
+				0125828D1B6F9B86007C4720 /* ForgetPasswordViewController.swift in Sources */,
+				016BA2271B6C9AD9006D0DA3 /* ScannerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		016BA2121B6C99D4006D0DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016BA21D1B6C99D4006D0DA3 /* ENSATProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		016BA2181B6C99D4006D0DA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 016BA1FE1B6C99D3006D0DA3 /* ENSATProject */;
+			targetProxy = 016BA2171B6C99D4006D0DA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		016BA20A1B6C99D4006D0DA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016BA20B1B6C99D4006D0DA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		016BA20F1B6C99D4006D0DA3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				016BA2101B6C99D4006D0DA3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		016BA21E1B6C99D4006D0DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		016BA21F1B6C99D4006D0DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		016BA2211B6C99D4006D0DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ENSATProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Michaelin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ENSATProject/ENSATProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		016BA2221B6C99D4006D0DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ENSATProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Michaelin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ENSATProject/ENSATProject-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		016BA2241B6C99D4006D0DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ENSATProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Michaelin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ENSATProject.app/ENSATProject";
+			};
+			name = Debug;
+		};
+		016BA2251B6C99D4006D0DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ENSATProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Michaelin.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ENSATProject.app/ENSATProject";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		016BA1FA1B6C99D3006D0DA3 /* Build configuration list for PBXProject "ENSATProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016BA21E1B6C99D4006D0DA3 /* Debug */,
+				016BA21F1B6C99D4006D0DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016BA2201B6C99D4006D0DA3 /* Build configuration list for PBXNativeTarget "ENSATProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016BA2211B6C99D4006D0DA3 /* Debug */,
+				016BA2221B6C99D4006D0DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		016BA2231B6C99D4006D0DA3 /* Build configuration list for PBXNativeTarget "ENSATProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				016BA2241B6C99D4006D0DA3 /* Debug */,
+				016BA2251B6C99D4006D0DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 016BA1F71B6C99D3006D0DA3 /* Project object */;
+}
