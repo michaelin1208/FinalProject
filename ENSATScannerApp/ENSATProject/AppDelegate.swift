@@ -9,8 +9,8 @@
 import UIKit
 
 //let ADDRESS = "localhost"     //local test address, have to change to ip address or website address
-let ADDRESS = "10.0.1.4"
-var CENTER_ID = "GYMU"
+let ADDRESS = "10.0.1.4"        // set to the address of server.
+var CENTER_ID = "GYMU"          // default center ID for testing. 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

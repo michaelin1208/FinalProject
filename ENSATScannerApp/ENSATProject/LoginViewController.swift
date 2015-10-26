@@ -27,12 +27,13 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // loginOperation method, it is used to login
     @IBAction func loginOperation(sender: AnyObject) {
         let username = usernameTextField.text
         let password = passwordTextField.text
         checkValidationThrough(username: username!, password: password!)
     }
-    
+    // forgetPasswordButtonTouched function, when user forget his password.
     @IBAction func forgetPasswordButtonTouched(sender: AnyObject) {
         AlertView.showNotice(message: "If you forget your password, Please contact to Administrator", inView: self)
     }
@@ -105,6 +106,7 @@ class LoginViewController: UIViewController {
         }
     }
 }
+//add sha1 and sha2 encryption functions into String class
 extension String {
     func sha1() -> String{
         let data = self.dataUsingEncoding(NSUTF8StringEncoding)!

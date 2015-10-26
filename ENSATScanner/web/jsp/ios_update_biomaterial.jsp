@@ -51,6 +51,7 @@ try{
     for(int i=0; i<array.size();i++){
         JSONObject obj = (JSONObject)array.get(i);
         logger.debug("obj "+obj);
+        // update the current locations of biomaterials and mark missed biomaterials in the database
         if (obj.get("section")==null){
             query = "UPDATE ACC_Biomaterial_Freezer_Information SET material_transferred='"+obj.get("current_center_id")+"', freezer_number='"+obj.get("freezer_number")+"', freezershelf_number='"+obj.get("freezershelf_number")+"', rack_number='"+obj.get("rack_number")+"', shelf_number='"+obj.get("shelf_number")+"', box_number='"+obj.get("box_number")+"', position_number='"+obj.get("position_number")+"' WHERE acc_biomaterial_location_id='"+obj.get("biomaterial_location_id")+"' AND ensat_id='"+obj.get("ensat_id")+"' AND center_id='"+obj.get("center_id")+"'";
             rs=sql.executeUpdate(query);

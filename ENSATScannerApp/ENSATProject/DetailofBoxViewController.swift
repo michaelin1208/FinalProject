@@ -41,6 +41,7 @@ class DetailofBoxViewController: UIViewController, UITableViewDataSource, UITabl
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // cancel button clicked
     @IBAction func cancelButtonTouched(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -89,6 +90,7 @@ class DetailofBoxViewController: UIViewController, UITableViewDataSource, UITabl
         self.detailsTableView.frame = newTextViewFrame;
         UIView.commitAnimations()
     }
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)

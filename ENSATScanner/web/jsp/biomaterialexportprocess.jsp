@@ -51,6 +51,7 @@
     String centerID=request.getParameter("material_transfer");
     int num=Integer.valueOf(s_num);
     String[] items;
+    //get the details about selected biomaterials and show them in a table. 
     ArrayList<Hashtable<String,String>> selectedItems = new ArrayList<Hashtable<String,String>>();
     for(int i=0;i<num;i++)
     {
@@ -129,13 +130,15 @@
     }
     catch(SQLException e1){out.print(e1);}
     String dir=application.getRealPath("/");  
-//    out.println("dir "+dir+"</br>"); 
+    
+    //generate the EXCEL to hold spreadsheet and the PDF with QR code
     bioMaterialExport.exportBioMaterialExcel(selectedItems, dir+"biomaterial_export/"+date+".xls");
     qRCodeGenerator.createPdf(String.valueOf(date), dir+"biomaterial_export/"+date+".pdf");
 %>
 </table>
 
 <script type="text/javascript">
+    // buttons to download two files
     var date = <%=date%>;
     function ExcelOnclick(){
        window.open("/ENSAT/biomaterial_export/"+date+".xls");

@@ -90,7 +90,7 @@ try{
     con=DriverManager.getConnection(uri,"root","");
     sql=con.createStatement();
     
-    //Get the transfer menu here (run once only)
+    //Get the destination center list here
     rs=sql.executeQuery("SELECT DISTINCT center_id FROM Center_Callout ORDER BY center_id;");
     while(rs.next()){
         String centerIn = rs.getString(1);
@@ -105,6 +105,7 @@ try{
     uri="jdbc:mysql://localhost:3306/ensat_v3";
     con=DriverManager.getConnection(uri,"root","");
     sql=con.createStatement();
+    //get the details of stored biomaterials in this section 
     rs=sql.executeQuery("select * from "+section+"_Biomaterial_Freezer_Information join "+section+"_Biomaterial where ("+section+"_Biomaterial_Freezer_Information.center_id = \""+userCenter+"\" or "+section+"_Biomaterial_Freezer_Information.material_transferred =\""+userCenter+"\") and "+section+"_Biomaterial_Freezer_Information.material_used = 'No' and "+section+"_Biomaterial_Freezer_Information."+section.toLowerCase()+"_biomaterial_id = "+section+"_Biomaterial."+section.toLowerCase()+"_biomaterial_id and "+section+"_Biomaterial_Freezer_Information.ensat_id = "+section+"_Biomaterial.ensat_id and "+section+"_Biomaterial_Freezer_Information.center_id = "+section+"_Biomaterial.center_id  and "+section+"_Biomaterial_Freezer_Information.freezer_number regexp '^[[:digit:]]+$' and "+section+"_Biomaterial_Freezer_Information.freezershelf_number regexp '^[[:digit:]]+$' and "+section+"_Biomaterial_Freezer_Information.rack_number regexp '^[[:digit:]]+$' and "+section+"_Biomaterial_Freezer_Information.shelf_number regexp '^[[:digit:]]+$' and "+section+"_Biomaterial_Freezer_Information.box_number regexp '^[[:digit:]]+$' and "+section+"_Biomaterial_Freezer_Information.position_number regexp '^[[:digit:]]+$' order by "+section+"_Biomaterial_Freezer_Information.ensat_id, "+section+"_Biomaterial.biomaterial_date");
     while(rs.next()){
         JSONObject item = new JSONObject();
@@ -141,6 +142,8 @@ try{
         out.println("<td>"+item.get("shelf_number").toString()+"</td>");
         out.println("<td>"+item.get("box_number").toString()+"</td>");
         out.println("<td>"+item.get("position_number").toString()+"</td>");       
+
+// set the checkbox value in order to transmit the selected biomaterials to next page  
 %>
 <td><input name="checkbox<%=i%>" type="checkbox" value="<%=item.get("biomaterial_location_id").toString()%>,<%=item.get("biomaterial_id").toString()%>,<%=item.get("ensat_id").toString()%>,<%=item.get("center_id").toString()%>,<%=item.get("conn_id").toString()%>,<%=item.get("bio_id").toString()%>,<%=item.get("biomaterial_date").toString()%>,<%=item.get("material").toString()%>,<%=item.get("aliquot_sequence_id").toString()%>,<%=item.get("freezer_number").toString()%>,<%=item.get("freezershelf_number").toString()%>,<%=item.get("rack_number").toString()%>,<%=item.get("shelf_number").toString()%>,<%=item.get("box_number").toString()%>,<%=item.get("position_number").toString()%>,<%=item.get("section").toString()%>"></td>
 <% 

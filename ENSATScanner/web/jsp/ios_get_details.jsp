@@ -22,6 +22,7 @@ try{
     String uri="jdbc:mysql://localhost:3306/ensat_v3";
     con=DriverManager.getConnection(uri,"root","");
     sql=con.createStatement();
+    // achieve the content of a spreadsheet by its ID. 
     rs=sql.executeQuery("select * from Biomaterial_Spreadsheet where spreadsheet_id = \""+spreadsheetID+"\"");
     JSONObject result = new JSONObject();
     JSONArray data = new JSONArray(); 
