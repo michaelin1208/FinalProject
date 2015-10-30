@@ -1,6 +1,6 @@
 # FinalProject
-Firstly, you should download the project from the GitHub address. 
-Secondly, you have to install MySQL in your server or computer, and run the SQL sentence in ‘MySQL’ folder in our project. The username and password of test user can be found in ‘testuser.sql’ file. You also need to check the problem discussed in Appendix B.6, in order to guarantee the database can be accessed by the server. 
+Firstly, you should download the project from the DVDs or GitHub address that only includes the files created in my system. 
+Secondly, you have to install MySQL in your server or computer, and run the SQL sentence in ‘ENSATSQL’ folder in our project. The username and password of test user can be found in ‘testuser.sql’ file. You maybe need to check the problem discussed in Appendix B.6, in order to guarantee the database can be accessed by the server. 
 Then you should have a web server, such as the NetBeans installed in my computer. The website project should be opened and run in your web server. Maybe you will find some problems about missed ‘jar’ files. Some of them can be download from the website, and others may not affect the running of the websites. Furthermore, you might need to modify the configure in ‘web.xml’, according to your setup. 
 After finishing above operations, you can login the ENSAT website through the test user. 
 If you already successfully run the old ENSAT websites, you can run ‘biomaterial_spreadsheet.sql’ file to create a new table in ‘ensat_v3’ schema in ENSAT database to support our system. In addition, as mentioned in Appendix B.9, we should modify the SQL sentence in ‘SummaryInfo.java’ to achieve all biomaterials really in this center and show correct center ID. 

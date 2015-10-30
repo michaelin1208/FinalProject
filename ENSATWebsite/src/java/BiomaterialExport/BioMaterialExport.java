@@ -12,6 +12,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 public class BioMaterialExport{
+    // export Excel file with biomaterial details
 	public void exportBioMaterialExcel(ArrayList<Hashtable<String,String>> array,String path) throws IOException {  
         
         ExportExcel<BioMaterial> exportExcel = new ExportExcel<BioMaterial>();  
@@ -26,16 +27,17 @@ public class BioMaterialExport{
         
         FileOutputStream out = null;  
         try {  
-            File directory = new File("");//设定为当前文件夹 
+            File directory = new File("");//set the current folder
 
-            System.out.println(directory.getCanonicalPath());//获取标准的路径 
-            System.out.println(directory.getAbsolutePath());//获取绝对路径 
+            System.out.println(directory.getCanonicalPath());//get the path
+            System.out.println(directory.getAbsolutePath());//get the absolute path
             
 
-            out = new FileOutputStream(new File(path));  
+            out = new FileOutputStream(new File(path));
+            // generate the Excel file with customised headers, list of data, output path and the time format. 
             exportExcel.exportExcep(headers, studentList, out, "yyyy/MM/dd");  
-//            JOptionPane.showMessageDialog(null, "导出成功");  
-            System.out.println("EXCEL导出成功!");  
+//            JOptionPane.showMessageDialog(null, "Success");
+            System.out.println("EXCEL export successfully!");
         } catch (FileNotFoundException e) {  
             e.printStackTrace();  
         }finally{  

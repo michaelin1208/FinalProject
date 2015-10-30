@@ -26,24 +26,7 @@ import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;  
 import com.itextpdf.text.pdf.PdfWriter;  
    
-public class QRCodeGenerator {  
-   
-    /** The resulting PDF. */  
-//    private static final String RESULT = "barcodes.pdf";  
-   
-    /** 
-     * Generates a PDF file with different types of barcodes. 
-     *  
-     * @param args 
-     *            no arguments needed here 
-     * @throws DocumentException 
-     * @throws IOException 
-     */  
-//    public static void main(String[] args) throws IOException,  
-//            DocumentException {  
-//        new QRCodeGenerator().createPdf(RESULT,RESULT);  
-//    }  
-      
+public class QRCodeGenerator {
    
     /** 
      * Creates a PDF document. 
@@ -63,7 +46,15 @@ public class QRCodeGenerator {
         // step 4  
         PdfContentByte cb = writer.getDirectContent();  
    
-          
+        
+        document.add(new Paragraph("BioMaterial QRCode"));
+        document.add(new Paragraph("Spread Sheet ID:" + content));
+        BarcodeQRCode qrcode = new BarcodeQRCode(content, 1, 1, null);
+        Image img = qrcode.getImage();
+        img.scalePercent(666, 666);
+        document.add(img);
+        
+        
 //        document.add(new Paragraph("BioMaterial QRCode"));  
 //        // EAN 13  
 //        document.add(new Paragraph("Barcode EAN.UCC-13"));  
@@ -223,12 +214,6 @@ public class QRCodeGenerator {
 //        img = datamatrix.createImage();  
 //        document.add(img);  
    
-        document.add(new Paragraph("BioMaterial QRCode")); 
-        document.add(new Paragraph("Spread Sheet ID:" + content)); 
-        BarcodeQRCode qrcode = new BarcodeQRCode(content, 1, 1, null);  
-        Image img = qrcode.getImage();  
-        img.scalePercent(666, 666);
-        document.add(img);  
    
         // step 5  
         document.close();  

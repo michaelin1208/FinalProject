@@ -24,49 +24,42 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;  
   
 /** 
- * 利用开源组件POI3.7动态导出EXCEL文档 
- * @author Administrator 
- * 
- * @param <T> 应用泛型,代表一个符合javabean风格的类 
- * 注意这里为了简单起见，boolean的属性xxx的get方式为getXxx(),而不是isXxx() 
- * byte[]表jpg格式的图片数据 
+ * Export Excel class used to export biomaterial excel.
  */  
 public class ExportExcel<T> {  
       
     public void exportExcel(Collection<T> dataset,OutputStream out){  
-        this.exportExcel("测试POI导出EXCEL文档", null, dataset, out, "yyyy-MM-dd");  
+        this.exportExcel("Test", null, dataset, out, "yyyy-MM-dd");
     }  
       
     public void exportExcel(String[] headers,Collection<T> dataset,OutputStream out){  
-        this.exportExcel("测试POI导出EXCEL文档", headers, dataset, out,"yyyy-MM-dd");  
+        this.exportExcel("Test", headers, dataset, out,"yyyy-MM-dd");
     }  
       
     public void exportExcep(String[] headers,Collection<T> dataset,OutputStream out,String patterm){  
-        this.exportExcel("测试POI导出EXCEL文档", headers, dataset, out, patterm);  
+        this.exportExcel("Test", headers, dataset, out, patterm);
     }  
       
-    /** 
-     * 这是一个通用的方法,利用了JAVA的反射机制,可以将放置在JAVA集合中并且符号一定条件的数据以EXCEL的形式输出到指定IO设备上 
+    /**
      * @param title 
-     *      表格标题名 
+     *      Sheet title
      * @param headers 
-     *      表格属性列名数组 
+     *      Titles of columes.
      * @param dataset 
-     *      需要显示的数据集合，集合中一定要放置符合javabean风格的类的对象。此方法支持的 
-     *      javabean属性的数据类型有基本数据类型以String,Date,byte[](图片数据) 
+     *      dataset to store into the Excel.
      * @param out 
-     *      与输出设备关联的流对象，可以将EXCEL文档导出到本地文件或者网络中 
+     *      output stream.
      * @param pattem 
-     *      如果有时间数据，设定输出格式。默认为"yyyy-MM-dd"; 
+     *      date format, default value is "yyyy-MM-dd".
      */  
     public void exportExcel(String title,String[] headers,Collection<T> dataset,OutputStream out,String pattem){  
-        //声明一个工作簿  
+        //create a work book
         HSSFWorkbook workbook = new HSSFWorkbook();  
-        //生成一个表格  
+        //create a sheet
         HSSFSheet sheet = workbook.createSheet(title);  
-        //设置表格默认列宽度为15个字节  
+        //set the default column width
         sheet.setDefaultColumnWidth((short)15);  
-        //生成一个样式(用于单元格)  
+        //create a cell style
         HSSFCellStyle style = workbook.createCellStyle();  
         style.setFillForegroundColor(HSSFColor.GOLD.index);  
         style.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);  
@@ -75,14 +68,14 @@ public class ExportExcel<T> {
         style.setBorderRight(HSSFCellStyle.BORDER_THIN);  
         style.setBorderTop(HSSFCellStyle.BORDER_THIN);  
         style.setAlignment(HSSFCellStyle.ALIGN_CENTER);  
-        //生成一个字体(用于单元格)  
+        //create a font
         HSSFFont font = workbook.createFont();  
         font.setColor(HSSFColor.BLACK.index);  
         font.setFontHeightInPoints((short)12);  
         font.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);  
-        //把字体应用到当前的样式  
+        //set the font
         style.setFont(font);  
-        //生成并设置另一个样式  
+        //create another cell style
         HSSFCellStyle style2 = workbook.createCellStyle();  
         style2.setFillForegroundColor(HSSFColor.WHITE.index);  
         style2.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);  
@@ -92,38 +85,32 @@ public class ExportExcel<T> {
         style2.setBorderTop(HSSFCellStyle.BORDER_THIN);  
         style2.setAlignment(HSSFCellStyle.ALIGN_CENTER);  
         style2.setVerticalAlignment(HSSFCellStyle.VERTICAL_CENTER);  
-        //生成另一个字体  
+        //create another font
         HSSFFont font2 = workbook.createFont();  
         font2.setBoldweight(HSSFFont.BOLDWEIGHT_NORMAL);  
-        //把字体应用到当前的样式  
+        //set the font
         style2.setFont(font2);  
           
-        //声明一个画图的顶级管理器  
+        
         HSSFPatriarch patriarch = sheet.createDrawingPatriarch();  
-//        //定义注释的大小和位置,详见文档  
-//        HSSFComment comment = patriarch.createComment(new HSSFClientAnchor(0,0,0,0,(short)4,2,(short)6,5));  
-//        //设置注释内容  
-//        comment.setString(new HSSFRichTextString("可以在POI中添加注释!"));  
-//        //设置注释作者,当鼠标移动单单元格上是可以在状态栏中看到该内容。  
-//        comment.setAuthor("wuhaidong");  
+ 
           
-        //产生表格标题行  
+        //set the column title
         HSSFRow row = sheet.createRow(0);  
         for(int i = 0; i < headers.length; i++){  
             HSSFCell cell = row.createCell((short) i);  
-            cell.setCellStyle(style);//设置单元格样式(包含字体)  
+            cell.setCellStyle(style);
             HSSFRichTextString text = new HSSFRichTextString(headers[i]);  
-            cell.setCellValue(text.toString());//把数据放到单元格中  
+            cell.setCellValue(text.toString());
         }  
           
-        //遍历集合数据,产生数据行  
+        //set the content
         Iterator<T> it = dataset.iterator();  
         int index = 0;  
         while(it.hasNext()){  
             index++;  
             row = sheet.createRow(index);  
-            T t = (T)it.next();  
-            //利用反射，根据javabean属性的先后顺序，动态的调用getXxx()方法得到属性值  
+            T t = (T)it.next();
             Field[] fields = t.getClass().getDeclaredFields();  
             for(int i = 0; i < fields.length; i++){  
                 HSSFCell cell = row.createCell((short) i);  
@@ -135,7 +122,7 @@ public class ExportExcel<T> {
                 try {  
                     Method getMethod = tCls.getMethod(getMethodName, new Class[]{});  
                     Object value = getMethod.invoke(t, new Object[]{});  
-                    // 判断值的类型后进行强制类型转换  
+                    
                     String textValue = null;  
                     /*if(value instanceof Integer){ 
                         Integer intValue = (Integer)value; 
@@ -152,9 +139,9 @@ public class ExportExcel<T> {
                     }else */  
                     if(value instanceof Boolean){  
                         boolean booleanValue = (Boolean)value;  
-                        textValue = "男";  
+                        textValue = "male";
                         if(!booleanValue){  
-                            textValue = "女";  
+                            textValue = "female";
                         }  
                         cell.setCellValue(textValue);  
                     }else if(value instanceof Date){  
@@ -162,10 +149,9 @@ public class ExportExcel<T> {
                         SimpleDateFormat sdf = new SimpleDateFormat(pattem);  
                         textValue = sdf.format(date);  
                         cell.setCellValue(textValue);  
-                    }else if(value instanceof byte[]){  
-                        //有图片时,设置行高为60px;  
-                        row.setHeightInPoints(60);  
-                        //设置有图片所在列宽度为80px,注意这里单位的一个换算  
+                    }else if(value instanceof byte[]){
+                        //set picture
+                        row.setHeightInPoints(60);
                         sheet.setColumnWidth((short) i, (short)(35.7*80));  
                         //sheet.autoSizeColumn(i);  
                         byte[] bsValue = (byte[])value;  
@@ -173,17 +159,16 @@ public class ExportExcel<T> {
 //                        anchor.setAnchorType(2);  
 //                        patriarch.createPicture(anchor,workbook.addPicture(bsValue, HSSFWorkbook.PICTURE_TYPE_JPEG));  
                     }else{  
-                        //其它数据类型都当做字符串简单处理  
+                        //other kinds of value
                         if(value != null){
                             textValue = value.toString();  
                         }
                     }  
-                    //如果不是图片数据,就利用正则表达式判断textValue是否全部由数字组成  
+                    //if it is not image, check whether it is a pure number
                     if(textValue != null){  
                         Pattern p = Pattern.compile("^\\d+(\\.\\d+)?$");  
                         Matcher matcher = p.matcher(textValue);  
-                        if(matcher.matches()){  
-                            //是数字当作double处理  
+                        if(matcher.matches()){
                             cell.setCellValue(Double.parseDouble(textValue));  
                         }else{  
                             HSSFRichTextString richString = new HSSFRichTextString(textValue);  
@@ -204,7 +189,7 @@ public class ExportExcel<T> {
                 } catch (InvocationTargetException e) {  
                     e.printStackTrace();  
                 }finally{  
-                    //关闭资源  
+                    
                 }  
             }  
         }  

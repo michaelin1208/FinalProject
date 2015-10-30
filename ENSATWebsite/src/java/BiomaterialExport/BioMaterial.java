@@ -15,6 +15,7 @@ public class BioMaterial {
 	String r_shelf;
 	String box;
 	String pos;
+    // bio material object with valuable attributs 
 	public BioMaterial(String ensat_id, String conn_id, String bio_id, String date, String material, String aliquot, String freezer, String f_shelf, String rack, String r_shelf, String box, String pos){
 		this.ensat_id = ensat_id;
 		this.conn_id = conn_id;
